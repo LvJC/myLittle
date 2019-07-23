@@ -1,12 +1,12 @@
+// 1. 两行输入
 // 格式为
 // 第一行：n, m
-// 第二行：m个数组成数组mm
+// 第二行：m个数合成数组mm
 #include "stdlib.h"
 #include <iostream>
 #include <vector>
 #include <iomanip>
 #include <limits.h>
-
 using namespace std;
 int main(){
     int n, m;
@@ -23,16 +23,16 @@ int main(){
 }
 
 
+// 2. 1+n行输入或2行输入
 // 格式为
 // 第一行：n ,m
 // 第二行：n*m个数，存为[n x m]的矩阵
+// #第二行之后，也可以用换行符隔开输入，没必要整行输入矩阵#
 #include "stdlib.h"
 #include <iostream>
 #include<vector>
 #include <iomanip>
 using namespace std;
-
-
 int main()
 {
     int m, n;
@@ -58,19 +58,58 @@ int main()
     return 0;
 }
 
-
-// 设置精度案例
-// setprecision example
-#include <iostream>     // std::cout, std::fixed
-#include <iomanip>      // std::setprecision
+// 3.
+// 格式为
+// 第一行：动态长度的数组
+// 输出动态长度的数字，空格间隔，回车完成输入
+#include <iostream>
+#include <vector>
 using namespace std;
-
-int main () {
-  double f =3.14159;
-  cout << setprecision(5) << f << '\n'; //3.1416
-  cout << setprecision(9) << f << '\n'; //3.14159
-  cout << fixed << f;                   //3.14159
-  cout << setprecision(4) << f << '\n'; //3.1415
-  cout << setprecision(9) << f << '\n'; //3.141590000
-  return 0;
+int main()
+{
+    vector<int> numbers;
+    while (1)
+    {
+        int temp;
+        cin >> temp;
+        // scanf("%d", &temp);
+        numbers.push_back(temp);
+        char s = cin.get(); //s用来接收是否是回车
+        // s = getchar(); //s用来接收是否是回车
+        if (s == '\n')
+        {
+            break;
+        }
+    }
+    //打印
+    for (int i = 0; i < numbers.size(); i++)
+    {
+        cout << numbers[i] << " ";
+    }
+    return 0;
 }
+
+
+
+// 4.
+// 格式为
+// 多行输入，每行2个数，直到遇见EOF才结束
+// Windows下EOF为Ctrl+z，Unix/Linux下为Ctrl+d
+#include <iostream>
+#include <vector>
+using namespace std;
+int main()
+{
+    int n, m;
+    vector<double> test;
+    while (cin>>n>>m)//循环多行输入，回车换行，Ctrl+Z可结束循环
+    {
+        test.push_back(n+m);
+    }
+    for (int i = 0; i < test.size(); ++i)
+    {
+        cout << fixed << setprecision(2) << test[i] << endl;
+    }
+    return 0;
+}
+
