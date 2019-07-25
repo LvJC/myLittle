@@ -1,3 +1,5 @@
+//找出数组中重复的数字
+
 class Solution {
 public:
     int duplicateInArray(vector<int>& nums) {
