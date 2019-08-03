@@ -1,3 +1,21 @@
+// 1.
+// 第一行输入：n
+// 第二行输入：长度为n的数组llist [int, int, ...]
+import sys
+try:
+    while True:
+        n = int(input())
+        if n == '':
+            break
+        l = input()
+        #if there are int numbers then use map(int,*)
+        #ints = list(map(int, l)) #type(ints)==list(int1,int2,...)
+        l = list(map(int, l.split(" ")))
+except:
+    pass
+
+
+// 2.
 // 输入矩阵带方括号和逗号
 // 如：[[0,0,0,0],[1,0,0,1],[1,1,1,0]]
 def input():
