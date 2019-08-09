@@ -113,3 +113,38 @@ int main()
     return 0;
 }
 
+
+
+// 5.
+// 字符串输入
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int T;
+    cin>>T;
+    for (int i = 0; i < T; ++ i)
+    {
+        int n, m;
+        cin >> n >> m;
+        int q[n];
+        //vector<int> q;
+        for (int j = 0; j<n; ++j)    scanf("%d", &q[j]);
+        
+        for (int k = 0; k<m; ++k)
+        {
+            int l, r;
+            cin >> l >> r;
+            cin.get();         //跳过回车
+            string str;
+            getline(cin, str); //整行读入
+            //operation
+            
+        }
+        
+        
+        
+    }
+    
+    
+    return 0;
+}
