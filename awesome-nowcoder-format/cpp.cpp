@@ -148,3 +148,23 @@ int main(){
     
     return 0;
 }
+
+
+
+// 6.
+// 按行输入数组vector<int> num 不执行中断
+string s;
+while (getline(cin, s)) //屈一整行
+{
+    vector<int> num;
+    int start_index = 0;
+    for (int i = 0; i != s.size(); ++i) 
+    {
+        if (s[i] == ' ') //空格区分
+        {
+            num.push_back(stoi(s.substr(start_index, i - start_index)));//子串转换为整数
+            start_index = i + 1;
+        }
+    }
+    num.push_back(stoi(s.substr(start_index, s.size() - start_index)));
+}
