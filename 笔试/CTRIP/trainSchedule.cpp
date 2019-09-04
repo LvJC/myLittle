@@ -2,6 +2,9 @@
 链接：https://www.nowcoder.com/discuss/245173?type=all&order=time&pos=&page=1
 来源：牛客网
 
+//示例输入："aabbcddc"
+//示例输出：2, 2, 4
+
 // 两次遍历，第一次统计字母个数，第二次维护cur 和 tar，cur表示当前字母个数，tar表示目标个数（例如已包含a，则全部a都要包含），
 // cur==tar时划分并清0
 
